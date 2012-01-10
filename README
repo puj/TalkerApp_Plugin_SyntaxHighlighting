@@ -1,6 +1,6 @@
 A simple, copy-paste plugin for TalkerApp.
 
-Prettify.js is basically embedded, my code is at the bottom of the js file.
+-----------------------------
 
 To install:
  1.  Open plugins page on a TalkerApp account
@@ -9,6 +9,8 @@ To install:
  4.  Copy the contents of  SyntaxHighlighting.js into the "source" field
  5.  Click "Create"
  6.  Enable the plugin
+
+-----------------------------
 
 To use:
  In the TalkerApp chatroom, preface code with ! in order for the highlighting to work.
@@ -22,6 +24,8 @@ Or multi-line:
 }
 
 The '!' will subsequently be removed and not shown in chat.
+
+-----------------------------
 
 Anatomy : 
 The first block of mess in the .js file is the declaration and insertion of the css elements which be applied to the final markup.  This is basically identical to prettify's sunburst.css
