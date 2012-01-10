@@ -1,0 +1,38 @@
+A simple, copy-paste plugin for TalkerApp.
+
+Prettify.js is basically embedded, my code is at the bottom of the js file.
+
+To install:
+ 1.  Open plugins page on a TalkerApp account
+ 2.  "Create a plugin"
+ 3.  Give a name and description to the plugin
+ 4.  Copy the contents of  SyntaxHighlighting.js into the "source" field
+ 5.  Click "Create"
+ 6.  Enable the plugin
+
+To use:
+ In the TalkerApp chatroom, preface code with ! in order for the highlighting to work.
+
+!var i = 0;
+!i++
+
+Or multi-line:
+!for( i = 0 ; i < 10 ; i ++){
+  // do nothing
+}
+
+The '!' will subsequently be removed and not shown in chat.
+
+Anatomy : 
+The first block of mess in the .js file is the declaration and insertion of the css elements which be applied to the final markup.  This is basically identical to prettify's sunburst.css
+
+The second block of mess is the prettify.js code which handles detection of language, keywords, operators, etc... 
+
+The third block of mess is the hook event for the plugin to activate.
+ - onMessageInsertion is used to ensure the element is attached to the DOM at calltime
+ - pastes, single lines, and multi lines are marked up differently in TalkerApp and must be handled accordingly
+ - the last major parent element preceding the span tags which prettify adds must be <pre>
+ - hack for linebreaks and expected spacing in paste text
+ - background color
+ - hack for string  -- it seems due to the nature of the css in the begginning of the .js file, the class 'str' is not recognized correctly so I just inlined it.
+
