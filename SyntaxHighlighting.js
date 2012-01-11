@@ -1448,6 +1448,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
 
 
 plugin.onMessageInsertion = function(talkerEvent){
+	var commandPrefix = '!code ';
 	/*
 	 * pre - if multiline
 	 * line - if last line in self-chat
@@ -1469,9 +1470,9 @@ plugin.onMessageInsertion = function(talkerEvent){
 	}
 	
 
-	if(!$f_replaceThis || $f_replaceThis.html()[0] != '>')return;
+	if(!$f_replaceThis || $f_replaceThis.html().indexOf(commandPrefix) != 0)return;
 
-	var content = $f_replaceThis.html().substring(1);
+	var content = $f_replaceThis.html().substring(commandPrefix.length);
 	
 	var str = content;
 	
