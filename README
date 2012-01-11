@@ -13,17 +13,17 @@ To install:
 -----------------------------
 
 To use:
- In the TalkerApp chatroom, preface code with ! in order for the highlighting to work.
+ In the TalkerApp chatroom, preface code with > in order for the highlighting to work.
 
-!var i = 0;
-!i++
+>var i = 0;
+>i++
 
 Or multi-line:
-!for( i = 0 ; i < 10 ; i ++){
+>for( i = 0 ; i < 10 ; i ++){
   // do nothing
 }
 
-The '!' will subsequently be removed and not shown in chat.
+The '>' will subsequently be removed and not shown in chat.
 
 -----------------------------
 

@@ -1469,7 +1469,7 @@ plugin.onMessageInsertion = function(talkerEvent){
 	}
 	
 
-	if(!$f_replaceThis || $f_replaceThis.html()[0] != '!')return;
+	if(!$f_replaceThis || $f_replaceThis.html()[0] != '>')return;
 
 	var content = $f_replaceThis.html().substring(1);
 	
